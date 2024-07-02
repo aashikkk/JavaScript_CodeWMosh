@@ -1,0 +1,34 @@
+For
+While
+Do...While
+For..in
+For..of
+
+for (initalExpression; condition; incrementExpression){
+    statement
+}
+
+for while loop, we need to declare the variable externally,
+
+let i = 1;
+while (condition){
+    statement;
+    incrementExpression;
+}
+
+// For vs while
+// for - variable declared within loop
+// while - variable declared externally before the loop
+// while - increment after the condition of the loop
+
+To iterate over the properties of an object or elements in
+an array
+-For in
+-For of
+
+Summary
+// For in 
+// To iterate over the properties of an Object 
+
+// For of
+// To iterate over the Elements or items in an Array

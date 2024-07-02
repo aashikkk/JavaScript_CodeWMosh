@@ -1,0 +1,11 @@
+ 
+We use Operators with variables and constants to create
+expressions.
+and with these expression we can create logic and algorithms.
+
+--- Operators ---
+1. Arithmetic
+2. Assignment
+3. Comparison
+4. Logical
+5. Bitwise

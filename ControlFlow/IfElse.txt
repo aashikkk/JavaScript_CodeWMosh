@@ -1,0 +1,17 @@
+// Conditional Statements
+// If-else
+// Switch-case
+
+if (conditon){
+    statment
+}
+else if(anotherConditon){
+    statment1
+    statement2
+}
+else if (yetAnotherConditon)
+    statment
+else
+    statement
+
+If one statement no need to put curly braces.
