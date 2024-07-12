@@ -11,7 +11,7 @@ for (let key in circle)
 // for (let key of circle)
 //     console.log(key);
 // cicle is not iterable
-
+ 
 // for of used with iterable such as arrays and maps
 // OBJECT IS NOT ITERABLE
 // SO WE CANNOT USE for of loop

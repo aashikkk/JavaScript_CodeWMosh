@@ -30,4 +30,4 @@ console.log(Square(2));
     2. console.log() --> to this function we pass a function as argument
 */
 
-// greet('Aashik', 'Shihaab');
+greet('Aashik', 'Shihaab');
