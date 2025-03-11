@@ -1,5 +1,3 @@
-# JavaScript_CodeWMosh
-
 # Basics for Beginners
 
 ## Basics
