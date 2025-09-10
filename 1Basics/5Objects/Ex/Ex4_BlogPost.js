@@ -7,7 +7,7 @@
 // isLive
 
 const blogPost = {
-    title: "Basics in SE",
+    title: "1Basics in SE",
     body: "abc",
     author: "John",
     views: 12,

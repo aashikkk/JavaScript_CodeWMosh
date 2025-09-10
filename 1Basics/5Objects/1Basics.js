@@ -1,7 +1,7 @@
 /*  
 -Purpose of Object is group related variables, functions
     functions and methods
-If a function is part of an object, in OOP terms,
+If a function is part of an object, in 2OOP terms,
 we refers to that function as a method.
 
 */
