@@ -23,7 +23,7 @@
 
  We Refer variable(x) as property and function(f()) as method.
 
-![alt text](<OOP Object.png>)
+![alt text](<imgs/OOP Object.png>)
 
 
  Ex: Car is an object.
@@ -48,20 +48,20 @@
  * Simpler Interface
  * Reduce the impact of change.
     
- ![alt text](Abstraction.png)
+ ![alt text](imgs/Abstraction.png)
 
  ### Inheritance
 
 * A mechanism that allows you to eliminate redundant code.  
 
-![alt text](Inheritance.png)
+![alt text](imgs/Inheritance.png)
 
  ### Polymorphism
 
  * Many forms.
  * Allows you to get rid of long if and else or switch case statements.
 
- ![alt text](BenefitsOfOOP.png)
+ ![alt text](imgs/BenefitsOfOOP.png)
 
 * Classes in JavaScript are not like classes we have in languages like Java and C#,
 Because JavaScript is dynamic type language.
@@ -69,19 +69,19 @@ Because JavaScript is dynamic type language.
 
 ### Prototypical inheritance
 
-![Circle and Shape func](image-1.png)
+![Circle and Shape func](imgs/image-1.png)
 
-![Inherit order shape](image.png)
-![Inherit order circle](image-2.png)
+![Inherit order shape](imgs/image.png)
+![Inherit order circle](imgs/image-2.png)
 
 What we need to do is
-![Circle-Shape](image-3.png)
+![Circle-Shape](imgs/image-3.png)
 
 Create a object with given prototype
 Circle.prototype = Object.Create(Shape.prototype)
 
 
-![Cirlce Inheritance from Shape](image-4.png)
+![Cirlce Inheritance from Shape](imgs/image-4.png)
 Shape -> ObjectBase
 Circle -> ShapeBase  -> ObjectBase
 
@@ -89,7 +89,7 @@ Circle -> ShapeBase  -> ObjectBase
 Whenever you reset the prototype, make sure you reset the constructor as well.
 
 Here when we check the constructor of Circle, Circle construct using Circle Object.
-![alt text](image-7.png)
+![alt text](imgs/image-7.png)
 
 we can construct using Circle,
 new Circle.prototype.constructor(1) => new Circle(1)
@@ -97,10 +97,10 @@ new Circle.prototype.constructor(1) => new Circle(1)
 When we create the prototype using Shape,
 
 We are having this problem when we reset the prototype of Circle.
-![alt text](image-6.png)
+![alt text](imgs/image-6.png)
 
 Now you can see constructor is circle and inherit from Shape as well.
-![alt text](image-9.png)
+![alt text](imgs/image-9.png)
 
 <b> So whenever you reset the perototype, make sure reset the constructor as the best practice.</b>
 
@@ -108,57 +108,57 @@ Now you can see constructor is circle and inherit from Shape as well.
 
 When we call just shape(arg) it will point out that to window object.
 
-![alt text](image-8.png)
+![alt text](imgs/image-8.png)
 
 Now you can see, this point out to Circle.
-![alt text](image-10.png)
+![alt text](imgs/image-10.png)
 
 
 ### Intermediate Function Inheritance
 
 This is okay, but too noisy when have multiple.
-![alt text](image-11.png)
+![alt text](imgs/image-11.png)
 
 Now fixed using IntermediateFunction
-![alt text](image-12.png)
+![alt text](imgs/image-12.png)
 
 
 ### Method Overriding
 
 When we have same function in Child and Parent, it will check first at child then parent. if found in child. it will return.
 
-![alt text](image-13.png)
+![alt text](imgs/image-13.png)
 
 Also what if we want to call Parent and Child in same function.
 By calling this using Prototype
 
-![alt text](image-14.png)
+![alt text](imgs/image-14.png)
 
 Don't use Inheritance is just the sake of using it. especially in small projects.
 * Start with simple objects, and then If you see no of objects share similar features,, then perhaps you can encapsulate those features inside of generic object and then inheritance.  Composition also another way to reuse.
 
-![alt text](image-15.png) 
+![alt text](imgs/image-15.png) 
  
 Have to change heirachy
-![alt text](image-16.png).
+![alt text](imgs/image-16.png).
 
 So, what if we have 10 types of animals, So Avoid creating INHERITANCE HEIRARCHIES.
 If you wanna use it, keep it in one level. don't go more than that.
 
 "Favour composition over Inheritance"
 
-![alt text](image-17.png)
+![alt text](imgs/image-17.png)
 
 Mixins to achieve compositons. 
 
 * Object.assign()  --> Copy the properties and methods from one object to another
 
 Ex1:
-![alt text](image-18.png)
-![alt text](image-19.png)
+![alt text](imgs/image-18.png)
+![alt text](imgs/image-19.png)
 
 Ex2:
-![alt text](image-20.png)
+![alt text](imgs/image-20.png)
 
 Select * From departments.id,
 employees.salary,
