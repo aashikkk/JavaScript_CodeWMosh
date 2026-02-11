@@ -30,8 +30,8 @@
 
 **2 types of programming languages.**
 
-1. Static
-   string name = 'Jhon'
+1. Static \n
+   string name = 'Jhon' \n
    This type of variable cannot be changed after set
 
 2. Dynamic
