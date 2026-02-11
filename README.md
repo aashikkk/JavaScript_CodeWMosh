@@ -18,6 +18,7 @@
     * [Function Declaration](#function-declaration)
     * [Function Expression](#function-expression)
     * [Private Members using Symbols](#private-members-using-symbols)
+* [3 Common Function - JS](#common-used-javascript-functions) 
 
 * [Important Concepts](#Important-concepts)
 
@@ -291,6 +292,125 @@ but for Class nothing is hoisted
 ### Private Members using Symbols
 
 ![alt text](2OOP/5Classes/imgs/image-3.png)
+
+# Common Used JavaScript Functions
+
+(Coding Questions Tailored) <br>
+
+⭐ These functions and methods are frequently used in coding problems, interviews, and real-world logic building.
+
+### 🔢 Number & Math Utilities
+
+Number() – Converts a value to a number.
+
+parseInt(), parseFloat() – Converts strings to integers or decimals.
+
+isNaN() – Checks if a value is Not-a-Number.
+
+Math.abs() – Returns absolute value.
+
+Math.trunc() – Removes decimal part.
+
+Math.sign() – Returns -1, 0, or 1 based on the number.
+
+### 🔤 String Utility Functions (Very Common)
+
+string.trim() – Removes whitespace from both ends.
+
+string.startsWith(), string.endsWith() – Checks string boundaries.
+
+string.charAt() – Gets character at index.
+
+string.substring(), string.slice() – Extracts part of a string.
+
+string.indexOf(), string.lastIndexOf() – Finds position of a substring.
+
+### 📦 Array Functions (Most Important for Coding)
+
+array.length – Size of array.
+
+array.includes() – Checks if value exists.
+
+array.indexOf() – Finds index of element.
+
+array.sort() – Sorts array (⚠️ careful with numbers).
+
+array.reverse() – Reverses array.
+
+array.reduce() – Accumulates values (sum, count, group).
+
+array.find(), array.findIndex() – Finds first matching element.
+
+array.every(), array.some() – Checks conditions on all or some elements.
+
+Array.from() – Converts iterable to array.
+
+### 🔄 Loop Helpers (Used Instead of for-loops)
+
+for...of – Loop through values.
+
+for...in – Loop through object keys.
+
+Object.keys() – Returns array of object keys.
+
+Object.values() – Returns array of object values.
+
+Object.entries() – Returns key-value pairs.
+
+### 🧠 Object & Data Handling
+
+Object.hasOwn() – Checks if key exists in object.
+
+JSON.parse() – Converts JSON string → object.
+
+JSON.stringify() – Converts object → JSON string.
+
+structuredClone() – Deep clone objects (modern JS).
+
+### ⚡ Logical & Comparison Helpers
+
+typeof – Check data type.
+
+Array.isArray() – Check if value is an array.
+
+Boolean() – Converts value to true/false.
+
+?? (Nullish Coalescing) – Handles null or undefined.
+
+?. (Optional Chaining) – Safely access nested properties.
+
+### 🕒 Timing & Async (Often Asked Conceptually)
+
+setTimeout() – Executes code after delay.
+
+setInterval() – Repeats execution.
+
+clearTimeout(), clearInterval()
+
+Promise.resolve(), Promise.reject()
+
+async / await
+
+### 🧪 Debugging & Testing Helpers
+
+console.log() – Debug output.
+
+console.table() – Visualize arrays/objects.
+
+console.error() – Log errors.
+
+### 📌 MOST USED IN CODING QUESTIONS (Quick List)
+
+If you remember only these, you’re already ahead:
+
+```js
+map, filter, reduce
+includes, indexOf
+split, join, trim
+sort, reverse
+Object.keys, Object.values
+Math.max, Math.min
+```
 
 
 ## Important Concepts
