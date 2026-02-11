@@ -30,12 +30,12 @@
 
 **2 types of programming languages.**
 
-1. Static
-   string name = 'Jhon'
+1. Static <br>
+   string name = 'Jhon' <br>
    This type of variable cannot be changed after set
 
-2. Dynamic
-   let name = 'Jhon'
+2. Dynamic <br>
+   let name = 'Jhon' <br>
    Can change at runtime
 
 **Reference types**
@@ -47,7 +47,7 @@
 ## Operators
 
 We use Operators with variables and constants to create
-expressions.
+expressions. <br>
 and with these expression we can create logic and algorithms.
 
 --- Operators ---
@@ -85,7 +85,7 @@ If one statement no need to put curly braces.
 
 ### Value vs Reference Types
 
-VALUE / PRIMITIVE
+VALUE / PRIMITIVE <br>
 
 1. Number
 2. String
@@ -94,35 +94,37 @@ VALUE / PRIMITIVE
 5. undefined
 6. null
 
-Reference
-Object
-Function
-Array
+Reference <br>
+Object <br>
+Function <br>
+Array <br>
 
-in JS, we have Primitives and Objects. Almost Reference Types fulla objects
-How Primitives and Objects behave differently.
-SHOULD UNDERSTAND - for Prototypes
+in JS, we have Primitives and Objects. Almost Reference Types fulla objects <br>
+How Primitives and Objects behave differently. <br>
+SHOULD UNDERSTAND - for Prototypes <br>
 
-Primitives are copied by their value.
-Ref types or Objects are copied by their reference.
+Primitives are copied by their value. <br>
+Ref types or Objects are copied by their reference. <br>
 
 ![Value.png](1Basics/5Objects/ValueVSReference.png)
 
 ------Cloning Object-------------
 
 Object.assign() copies the properties and methods from 1 or
-more source objects into target object.
+more source objects into target object. <br>
 we can use that to clone an object or combine multiple objects
 into single object.
 
-Spread Operator used to spread an object, means getting all
+Spread Operator used to spread an object, means getting all 
 it's properties and methods and putting them into another object.
 
+<br>
 --Garbage Collecter--------
 In JS, we don't need to allocate or deallocate their memory
-when declaring variables.
+when declaring variables. <br>
 it will do automatically by own.
 
+<br>
 -----Math---------
 Math Object used to do arithmetic things.
 Math.random()
@@ -131,7 +133,7 @@ Math.max()
 
 ---
 
-Object is only have properties and methods.
+Object is only have properties and methods. <br>
 Not Primitives.
 
 # Object Oriented Programming
