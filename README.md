@@ -913,3 +913,226 @@ async function main() {
     * Wrapping old callback APIs (`new Promise`).
     * Handling complex race conditions (`Promise.race`, `Promise.any`).
 
+
+#  JS Prototypes and Inheritance
+
+- In JavaScript, every object has a hidden property called `[[Prototype]]` (often accessed via `__proto__` or `Object.getPrototypeOf()`). This property points to another object, which is called the prototype. When you try to access a property on an object, JavaScript first looks for that property on the object itself. If it doesn't find it, it looks up the prototype chain until it finds the property or reaches the end of the chain (null).
+Ex:
+```javascript
+const parent = {
+    greet() {
+        console.log("Hello from the parent!");
+    }
+};
+
+const child = Object.create(parent);
+child.greet(); // Output: "Hello from the parent!"
+
+```
+- This is how inheritance works in JavaScript. If you create an object that inherits from another object, it can access the properties and methods of the parent object through the prototype chain. This allows for code reuse and a form of inheritance without needing classes (though ES6 introduced class syntax as syntactic sugar over this prototype-based system).
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+const bob = new Person("bob");
+
+console.log(bob.prototype) // Output: undefined, because instances do not have a prototype property.
+console.log(bob.__proto__) // Output: Person.prototype, which is the prototype of the instance bob.
+console.log(Person.prototype) // Output: {constructor: ƒ}, which is the prototype object that instances of Person inherit from.
+console.log(bob.__proto__ === Person.prototype) // Output: true, confirming that bob's prototype is indeed Person.prototype.
+```
+
+![img.png](2OOP/imgs/JSProto.png)
+
+Class - > syntactic sugar over prototypes. It provides a cleaner and more familiar syntax for creating objects and handling inheritance, but under the hood, it still uses prototypes. When you define a class in JavaScript, it creates a constructor function and sets up the prototype chain for you.
+
+```javascript
+class Person {
+    constructor(name) {
+        this.name = name;
+    }   
+    greet() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+}
+const alice = new Person("Alice");
+alice.greet(); // Output: "Hello, my name is Alice"
+```
+
+# JS Advanced Objects 
+(https://www.w3schools.com/js/js_object_advanced.asp)
+
+## Object Definition 
+(https://www.w3schools.com/js/js_object_definition.asp)
+### Using an Object Literal
+An object literal is a list of property key:values inside curly braces { }.
+
+`{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};`
+
+```js
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+}
+```
+
+### Using the new Keyword
+
+```js
+// Create an Object
+const person = new Object({
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+});
+```
+
+Note:
+The examples above do exactly the same.
+
+But, there is no need to use new Object().
+
+For readability, simplicity and execution speed, use the object literal method.
+
+### JavaScript Object.create()
+The Object.create() method creates an object from an existing object.
+
+```js
+// Create an Object:
+const person = {
+  firstName: "John",
+  lastName: "Doe"
+};
+
+// Create new Object
+const man = Object.create(person);
+man.firstName = "Peter";
+```
+
+### JavaScript Object fromEntries()
+ES2019 added the Object method fromEntries() to JavaScript.
+
+The fromEntries() method creates an object from iterable key / value pairs.
+
+```js
+const fruits = [
+    ["apples", 300],
+    ["pears", 900],
+    ["bananas", 500]
+];
+
+const myObj = Object.fromEntries(fruits);
+```
+
+### JavaScript Object.assign()
+The Object.assign() method copies properties from one or more source objects to a target object.
+
+```js
+// Create Target Object
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Create Source Object
+const person2 = {firstName: "Anne",lastName: "Smith"};
+
+// Assign Source to Target
+Object.assign(person1, person2);
+```
+
+### In JavaScript, Objects are King.
+#### If you Understand Objects, you Understand JavaScript.
+#### In JavaScript, almost "everything" is an object.
+
+* Objects are objects
+* Maths are objects
+* Functions are objects
+* Dates are objects
+* Arrays are objects
+* Maps are objects
+* Sets are objects
+All JavaScript values, except primitives, are objects.
+
+
+### JavaScript Primitives
+A primitive data type is data type that can only store a single primitive value.
+
+JavaScript defines 7 types of primitive data types:
+
+| Type        | Example value        |
+|-------------|----------------------|
+| string      | "Hello"              |
+| number      | 3.14                 |
+| boolean     | true                 |
+| bigint      | 12345678901234       |
+| null        | null                 |
+| undefined   | undefined            |
+| symbol      | symbol               |
+
+## Immutable
+Primitive values are immutable (they are hardcoded and cannot be changed).
+
+## JavaScript Objects are Mutable
+Objects are mutable: They are addressed by reference, not by value.
+
+If person is an object, the following statement will not create a copy of person:
+
+if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
+
+The object x is not a copy of person. The object x is person.
+
+The object x and the object person share the same memory address.
+
+Any changes to x will also change person:
+
+
+```js
+//Create an Object
+const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+
+// Try to create a copy
+const x = person;
+
+// This will change age in person:
+x.age = 10;
+```
+
+## JavaScript Object Iterations
+```
+// Copies properties from a source object to a target object
+Object.assign(target, source)
+
+// Creates an object from an existing object
+Object.create(object)
+
+// Returns an array of the key/value pairs of an object
+Object.entries(object)
+
+// Creates an object from a list of keys/values
+Object.fromEntries()
+
+// Returns an array of the keys of an object
+Object.keys(object)
+
+// Returns an array of the property values of an object
+Object.values(object)
+
+// Groups object elements according to a function
+Object.groupBy(object, callback)
+```
+
+[//]: # (## this in JavaScript Objects)
+
